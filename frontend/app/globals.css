@@ -4,7 +4,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   DocuAgent Design System — globals.css
+   DocuAgent Design System - globals.css
    Light-mode first · Alabaster canvas · Graphite typography
    ============================================================ */
 
@@ -225,6 +225,7 @@ body {
 .bento-grid {
   display: grid;
   gap: var(--gap);
+  padding : 20px;
 }
 
 .bento-compact {
@@ -235,12 +236,12 @@ body {
 }
 
 .bento-expanded {
-  grid-template-columns: 380px 1fr 1fr;
+  grid-template-columns: 380px 1.4fr 0.8fr;
   grid-template-rows: auto auto 1fr;
   grid-template-areas:
     "input  meta   meta"
-    "graph  graph  manual"
-    "graph  graph  diff";
+    "manual manual  graph"
+    "diff  diff  graph";
 }
 
 @media (max-width: 1024px) {
@@ -248,8 +249,8 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "input  meta"
-      "graph  graph"
-      "manual diff";
+      "manual  manual"
+      "diff graph";
   }
 }
 
@@ -293,7 +294,7 @@ body {
 }
 
 .card-manual {
-  padding: 0;
+  padding: 16px;
   display: flex;
   flex-direction: column;
 }

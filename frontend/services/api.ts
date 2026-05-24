@@ -1,5 +1,5 @@
 // ============================================================
-//  DocuAgent AI Engine — Typed API Service Layer
+//  DocuAgent AI Engine - Typed API Service Layer
 //  Maps exactly to the FastAPI/Pydantic backend contracts
 // ============================================================
 
@@ -33,9 +33,6 @@ export interface ApiError {
 }
 
 // ─── Backend Response Wrapper ─────────────────────────────────
-// The backend orchestrator wraps all responses in:
-// { success: bool, data: <schema> | null, error: str | null }
-
 interface BackendEnvelope<T> {
   success: boolean;
   data: T | null;
@@ -43,9 +40,6 @@ interface BackendEnvelope<T> {
 }
 
 // ─── Error Event Bus ─────────────────────────────────────────
-// Instead of throwing, we dispatch a custom event so the UI
-// can intercept failures and show an elegant modal.
-
 export function dispatchApiError(error: ApiError): void {
   if (typeof window !== "undefined") {
     window.dispatchEvent(
@@ -69,6 +63,16 @@ async function apiFetch<T>(
       },
     });
 
+    // ✨ NEW PRODUCTION QUOTA GUARD FOR RENDER
+    if (response.status === 429) {
+      dispatchApiError({
+        type: "server",
+        message: "Demo Tier Quota Exceeded! The shared free AI capacity is temporarily full. Please wait a minute for the rate window to reset before submitting again.",
+        status: 429,
+      });
+      return null;
+    }
+
     if (!response.ok) {
       const body = await response.text().catch(() => "Unknown server error");
       dispatchApiError({
@@ -82,8 +86,6 @@ async function apiFetch<T>(
     const json = await response.json();
 
     // ── Unwrap the backend's { success, data, error } envelope ──
-    // The orchestrator always wraps results. Detect this pattern by
-    // checking for the 'success' boolean field.
     if (
       json !== null &&
       typeof json === "object" &&
@@ -92,7 +94,6 @@ async function apiFetch<T>(
       const envelope = json as BackendEnvelope<T>;
 
       if (!envelope.success) {
-        // The orchestrator returned a logical failure (e.g. bad API key, failed extraction)
         dispatchApiError({
           type: "server",
           message:
@@ -102,11 +103,9 @@ async function apiFetch<T>(
         return null;
       }
 
-      // Success — return the inner data payload
       return envelope.data ?? null;
     }
 
-    // No envelope detected — return raw JSON directly
     return json as T;
 
   } catch (err: unknown) {

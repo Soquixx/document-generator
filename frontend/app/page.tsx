@@ -51,6 +51,7 @@ export default function Home() {
 
   const hasData = docData !== null;
 
+  // ─── Original Working Layout Mappings (Do Not Modify) ───
   const bentoCards = [
     {
       id: "input",
@@ -163,7 +164,7 @@ export default function Home() {
                 <span className="hero-accent">in seconds.</span>
               </h2>
               <p className="hero-sub">
-                Drop a GitHub URL. Multi-agent AI generates architecture diagrams, full documentation, and PR templates — instantly.
+                Drop a GitHub URL. Multi-agent AI generates architecture diagrams, full documentation, and PR templates instantly.
               </p>
             </motion.div>
           )}

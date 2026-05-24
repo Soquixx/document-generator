@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "DocuAgent AI Engine — Automated Technical Documentation",
+  title: "DocuAgent AI Engine - Automated Technical Documentation",
   description:
     "Generate comprehensive technical documentation, architecture diagrams, and PR templates from any GitHub repository using multi-agent AI.",
   keywords: ["documentation", "AI", "GitHub", "architecture", "mermaid", "developer tools"],
