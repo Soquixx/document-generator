@@ -19,6 +19,11 @@ export default function MermaidGraph({ graph }: MermaidGraphProps) {
   const panStart = useRef({ x: 0, y: 0 });
   const lastTransform = useRef({ x: 0, y: 0 });
 
+  // 🔍 Debug log to inspect incoming graph string
+  useEffect(() => {
+    console.log("Mermaid graph string:", graph);
+  }, [graph]);
+
   useEffect(() => {
     if (!graph || !containerRef.current) return;
 
