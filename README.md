@@ -36,6 +36,13 @@ DocuAgent is an AI-powered architecture orchestration platform that converts com
 
 </div>
 
+# Live Demo
+
+Frontend:
+https://docuagent-wine.vercel.app/
+
+Backend API:
+
 ---
 
 
@@ -64,7 +71,7 @@ It acts as an intelligent orchestration layer that:
 
 # ✨ Features
 
-## 🧠 Neural Repository Intelligence
+##  Repository Analysis
 
 DocuAgent doesn't just parse files.
 
@@ -75,7 +82,7 @@ It understands:
 - Architectural boundaries
 - Runtime structures
 - Service interactions
-- Repository cognition
+
 
 ---
 
@@ -240,8 +247,8 @@ A modular dashboard optimized for engineering workflows.
 
 | Layer | Technology |
 |---|---|
-| Framework | Next.js 16 |
-| Runtime | React 19 |
+| Framework | Next.js  |
+| Runtime | React  |
 | Bundler | Turbopack |
 | Styling | Tailwind CSS |
 | UI Architecture | Bento Grid System |
@@ -303,6 +310,11 @@ https://github.com/example/project
 ```
 
 ---
+
+# Sample Repository for Testing
+https://github.com/zhanymkanov/fastapi-best-practices.git
+
+https://github.com/Soquixx/Voicebot-grp-C.git
 
 ## 2️⃣ AI Structural Analysis
 
@@ -384,6 +396,7 @@ GEMINI_API_KEY=your_api_key_here
 ## 1️⃣ Frontend Setup
 
 ```bash
+cd frontend
 npm install
 npm run dev
 ```
@@ -399,6 +412,8 @@ http://localhost:3000
 ## 2️⃣ Backend Setup
 
 ```bash
+cd backend
+pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
@@ -433,13 +448,6 @@ http://localhost:8000
 
 ---
 
-## 📚 Developer Education
-- Learn system architecture
-- Visualize execution flows
-- Understand dependency relationships
-- Explore complex repositories
-
----
 
 # 🔒 Security & Governance
 
@@ -454,7 +462,6 @@ DocuAgent is designed with:
 # 📈 Performance Philosophy
 
 Built for:
-- Large-scale repositories
 - Fast architecture rendering
 - Incremental graph updates
 - Real-time documentation refinement
@@ -467,16 +474,7 @@ Powered by:
 
 ---
 
-# 🧪 Development Philosophy
 
-DocuAgent follows:
-- Modular architecture
-- Domain-driven design
-- AI-first workflow engineering
-- Scalable component systems
-- Developer-centric UX principles
-
----
 
 # 🛣️ Strategic Roadmap
 
@@ -487,16 +485,6 @@ DocuAgent follows:
 - [x] Repository structural analysis
 - [x] Automated documentation generation
 - [x] PR template automation
-
----
-
-## 🚧 In Progress
-
-- [ ] Deep repository cross-referencing
-- [ ] Context-aware architecture memory
-- [ ] Incremental repository synchronization
-- [ ] AI-powered anomaly detection
-- [ ] Multi-language repository support
 
 ---
 
@@ -511,9 +499,6 @@ DocuAgent follows:
 
 ---
 
-# 🤝 Contributing
-
-Contributions are welcome.
 
 ## Development Workflow
 
