@@ -237,6 +237,7 @@ A modular dashboard optimized for engineering workflows.
 | Layer | Technology |
 |---|---|
 | AI Engine | Google Gemini 1.5 Pro |
+| Agent Framework| CrewAI|
 | AI SDK | Google Generative AI SDK |
 | Analysis Core | Custom Semantic Analyzer |
 | Diff Engine | Custom State Patching Layer |
@@ -299,7 +300,7 @@ docuagent/
 └── package.json                       # Root package configuration
 ```
 
-# 🎬 Workflow
+# 🎬  Workflow
 
 ## 1️⃣ Repository Ingestion
 
@@ -355,7 +356,7 @@ Generate:
 # 🖥️ UI Showcase
 <img width="1781" height="789" alt="Screenshot 2026-05-24 181700" src="https://github.com/user-attachments/assets/5c8dab45-13fd-488e-bf2f-53c61d2ea48e" />
 
-### 🎥 Live Workflow GIF
+### 🎥 Live Workflow 
 
 https://github.com/user-attachments/assets/1e4a0e1c-5fe9-49a1-94ed-62f5f184fc5a
 
@@ -475,9 +476,6 @@ Powered by:
 ---
 
 
-
-# 🛣️ Strategic Roadmap
-
 ## ✅ Current Features
 
 - [x] Gemini 1.5 Pro integration
@@ -529,16 +527,6 @@ MIT License © 2026 DocuAgent
 
 ---
 
-# 🌌 Vision
-
-DocuAgent is building toward a future where:
-
-- Documentation updates itself
-- Architecture remains alive
-- Repositories become intelligent systems
-- Engineering knowledge becomes explorable infrastructure
-
----
 
 <div align="center">
 
