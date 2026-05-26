@@ -40,6 +40,7 @@ DocuAgent is an AI-powered architecture orchestration platform that converts com
 
 https://docuagent-wine.vercel.app
 
+Note:The backend runs on Render's free tier and may take ~30 seconds to wake up on first request after inactivity.
 ---
 
 
