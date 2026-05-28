@@ -18,7 +18,14 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@app.get("/")
+def root():
+    return {"message": "DocuAgent backend running successfully"}
 
+
+@app.get("/health")
+def health():
+    return {"status": "healthy"}
 # 3. Define the Structured Input Request Models
 class RepoRequest(BaseModel):
     repo_url: HttpUrl  # Natively validates that the incoming string is a real, well-formed URL
